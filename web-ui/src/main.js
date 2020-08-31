@@ -16,7 +16,7 @@ Vue.use(VueAxios, Axios);
 Vue.config.productionTip = false
 
 import store from "./store";
-import global from '../mixins/global';
+import global from './mixins/global';
 
 Vue.mixin(global);
 

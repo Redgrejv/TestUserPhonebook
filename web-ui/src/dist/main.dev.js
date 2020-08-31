@@ -16,7 +16,7 @@ var _router = _interopRequireDefault(require("./router"));
 
 var _store = _interopRequireDefault(require("./store"));
 
-var _global = _interopRequireDefault(require("../mixins/global"));
+var _global = _interopRequireDefault(require("./mixins/global"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
