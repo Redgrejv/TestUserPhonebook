@@ -1,5 +1,10 @@
 <template>
-  <div>comments list</div>
+  <div>
+    <div v-for="(comment, i) in comments" :key="i">
+        <p>{{comment.author}}</p>
+        <p>{{comment.text}}</p>
+    </div>
+  </div>
 </template>
 
 <script>
