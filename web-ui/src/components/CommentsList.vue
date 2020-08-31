@@ -4,7 +4,12 @@
 
 <script>
 export default {
-    name: 'CommentsList'
+    name: 'CommentsList',
+    computed: {
+        comments() {
+            return this.$store.getters.LIST_COMMENTS 
+        }
+    },
 }
 </script>
 

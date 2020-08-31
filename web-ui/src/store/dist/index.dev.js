@@ -13,13 +13,16 @@ var _vuexPersistedstate = _interopRequireDefault(require("vuex-persistedstate"))
 
 var _user = _interopRequireDefault(require("./modules/user"));
 
+var _comments = _interopRequireDefault(require("./modules/comments"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 _vue["default"].use(_vuex["default"]);
 
 var _default = new _vuex["default"].Store({
   modules: {
-    user: _user["default"]
+    user: _user["default"],
+    comments: _comments["default"]
   },
   state: {},
   getters: {},

@@ -5,11 +5,13 @@ import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex);
 
-import user from './modules/user'
+import user from './modules/user';
+import comments from './modules/comments';
 
 export default new Vuex.Store({
     modules: {
-        user
+        user,
+        comments
     },
     state: {},
     getters: {},
