@@ -97,6 +97,7 @@ htmp, body {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    box-shadow: 0 0 5px black;
 
     &-items {
       flex-direction: row;

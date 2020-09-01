@@ -27,25 +27,27 @@ const mutations = {
 
 const actions = {
     SIGN_IN: (context, data) => {
-            // axios.post('/sign/in');
+            // return axios.post('/sign/in', data);
 
-            return new Promise((resolve, reject) => {
+        const dUser = context.rootState.user.defaultUsers.find(el => el.email === data.email);
 
-                const dUser = state.defaultUsers.find(el => el.email === data.email);
-    
-                if (!dUser) {
-                    return reject('User not found');
-                }
-    
-                if (dUser.password !== data.password) {
-                    return reject('invalid user credentials');
-                }
-    
-                return resolve({data: dUser});
-    
-            });
+        return new Promise((resolve, reject) => {
+
+            if (!dUser) {
+                return reject('User not found');
+            }
+
+            if (dUser.password !== data.password) {
+                return reject('invalid user credentials');
+            }
+
+            return resolve({data: dUser});
+
+        });
     },
     SIGN_UP: (context, data) => {
+        // return axios.post('/sign/up', data)
+
         return new Promise((resolve, reject) => {
 
             const dUser = state.defaultUsers.find(el => el.email === data.email);

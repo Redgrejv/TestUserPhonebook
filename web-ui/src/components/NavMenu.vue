@@ -40,6 +40,7 @@ export default {
     .menu {
         width: 250px;
         max-width: 250px;
+        min-width: 250px;
         left: 0;
         top: 0;
         background-color: rgb( 14 , 18, 18 );
