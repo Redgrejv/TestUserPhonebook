@@ -48,9 +48,9 @@ const actions = {
     SIGN_UP: (context, data) => {
         // return axios.post('/sign/up', data)
 
-        return new Promise((resolve, reject) => {
+        const dUser = context.rootState.user.defaultUsers.find(el => el.email === data.email);
 
-            const dUser = state.defaultUsers.find(el => el.email === data.email);
+        return new Promise((resolve, reject) => {
 
             if (dUser) {
                 return reject('User is busy');
